@@ -27,9 +27,9 @@ def getInput(col):
 
 
 def findSeparator(str):
-    for i in [' ',',','.']:
-        if str.find(i) != -1:
-            return i
+    for separator in [' ',',','.']:
+        if str.find(separator) != -1:
+            return separator
     else:
         return 'wrong format'
 

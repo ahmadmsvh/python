@@ -1,9 +1,4 @@
-def getNumber():
-    try:
-        number = int(input('enter a number:'))
-        return number
-    except Exception:
-        number = getNumber()
-        return number
-        
-print(getNumber())
+a = [[4,3,12],[2,1,7]]
+b = max(a)
+c = a.index(7)
+print(c)
