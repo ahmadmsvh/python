@@ -4,14 +4,18 @@ def printTable(table):
     row_count = 0
     for row in table:
         col_count = 0
+        print('       *       *       ')
         for element in row:
             if col_count < 2:
-                print('',element,'|',end='')
+                print('   '+element+'   *',end='')
                 col_count += 1
             else:
-                print('',element,end='\n')
-                if row_count != 2:
-                    print('------------')
+                print('   '+element+'   ',end='\n')
+        if row_count != 2:
+            print('       *       *       ')
+            print(' * * * * * * * * * * * ')
+        else:
+            print('       *       *       ')
         row_count +=1
     print()
 
