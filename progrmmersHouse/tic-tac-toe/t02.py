@@ -99,6 +99,10 @@ def getInput(options):
 
 ############### set choice ###############
 def setChoice(table,choice,symbol):
+    if symbol == 'x':
+        symbol = 'X'
+    else:
+        symbol = 'O'
     table[choice[0]][choice[1]] = symbol
 
 

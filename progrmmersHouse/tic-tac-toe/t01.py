@@ -94,6 +94,10 @@ def getInput(options):
 
 ############### set choice ###############
 def setChoice(table,choice,symbol):
+    if symbol == 'x':
+        symbol = 'X'
+    else:
+        symbol = 'O'
     dim = len(table)
     for row in range(dim):
         for col in range(dim):
