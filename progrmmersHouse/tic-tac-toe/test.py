@@ -1,13 +1,1 @@
-print('      *       *      ')
-print('  x   *   o   *   x  ')
-print('      *       *      ')
-print('* * * * * * * * * * *')
-print('      *       *      ')
-print('  x   *   o   *   x  ')
-print('      *       *      ')
-print('* * * * * * * * * * *')
-print('      *       *      ')
-print('  x   *   o   *   x  ')
-print('      *       *      ')
-  
-
+a=[1,2,3,4,5,6]

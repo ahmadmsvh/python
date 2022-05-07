@@ -22,8 +22,7 @@ def getInput(col):
 
     except Exception:
         print('wrong format! enter row again:')
-        inp = getInput(col)
-        return inp
+        return getInput(col)
 
 
 def findSeparator(str):
@@ -38,9 +37,7 @@ def getInteger():
         inp = int(input())
         return inp
     except Exception:
-        inp = getInteger
-        return inp
-
+        return getInteger()
 def makeDiff(my_array):
     out_array = [[0 for i in range(len(my_array[0]) * 2)] for i in range(len(my_array))]
     

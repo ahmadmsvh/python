@@ -85,12 +85,11 @@ def getInput(options):
         
         if inp not in options: 
             raise Exception
+        return inp
     except Exception:
         print('wrong input enter again:\t')
-        inp = getInput(options)
-        return inp
-    return inp
-
+        return getInput(options)
+    
 
 ############### set choice ###############
 def setChoice(table,choice,symbol):
@@ -188,3 +187,17 @@ def gameMannager(table):
 table = [[x for x in range(1,4)],[x for x in range(4,7)],[x for x in range(7,10)]]
 
 gameMannager(table)
+
+
+
+# print('      .       .      ')
+# print('  x   .   o   .   x  ')
+# print('      .       .      ')
+# print('. . . . . . . . . . .')
+# print('      .       .      ')
+# print('  x   .   o   .   x  ')
+# print('      .       .      ')
+# print('. . . . . . . . . . .')
+# print('      .       .      ')
+# print('  x   .   o   .   x  ')
+# print('      .       .      ')

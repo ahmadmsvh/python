@@ -90,11 +90,10 @@ def getInput(options):
         
         if inp not in options: 
             raise Exception
+        return inp
     except Exception:
         print('wrong input enter again:\t')
-        inp = getInput(options)
-        return inp
-    return inp
+        return getInput(options)
 
 
 ############### set choice ###############

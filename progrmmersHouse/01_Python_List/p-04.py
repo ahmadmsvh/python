@@ -38,8 +38,7 @@ def getInteger():
         inp = int(input())
         return inp
     except Exception:
-        inp = getInteger()
-        return inp
+        return getInteger()
 
 ################# Find saddle point #################
 def findSaddlePoint(my_matrix):

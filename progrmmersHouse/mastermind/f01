@@ -1,0 +1,92 @@
+from getpass import getpass
+import random
+
+################# input function #################
+def inputFunction(type):
+    try:
+        if type == 'guess':
+            options = ['b','g','k','y','r','w']
+            inp = input('please enter your guess:\t')
+            for x in inp:
+                if x not in options or len(inp) > 4:
+                    raise Exception
+            return inp
+        elif type == 'init':
+            options = ['b','g','k','y','r','w']
+            inp = getpass('please enter your code:\t')
+            for x in inp:
+                if x not in options or len(inp) > 4:
+                    raise Exception
+            return inp
+    except Exception:
+        print('wron input,try again:')
+        return inputFunction(type)
+
+
+################# shuffle list #################
+def shuffle(my_list):
+    shuffled = []
+    for i in range(len(my_list)-1,-1,-1):
+        index = random.randint(0,i)
+        shuffled.append(my_list.pop(index))
+    return shuffled
+
+################# check the guess #################
+def checkGuess(guess,response):
+    res_list = []
+    for x in guess:
+        if guess.find(x) == response.find(x):
+            res_list.append('right') 
+        elif x in response:
+            res_list.append('include')
+    res_list = shuffle(res_list)
+    return res_list
+
+
+################# run the game #################
+def printTable(table):
+    print()
+    i = 0
+    for row in table:
+        i += 1
+        print('%d:  '%i, end='')
+        for x in row[0]:
+            print(' %s '%x, end='')
+        print('   checking: ', end='')
+        for x in row[1]:
+            print(' %s '%x, end='')
+        print()
+
+
+################# run the game #################
+def runGame(response):
+    table = []
+    for round in range(10):
+        guess = inputFunction('guess')
+        check = checkGuess(guess,response)
+        table.append([guess,check])
+        if check == ['right'for x in range(4)]:
+            printTable(table)
+            return 'winner'
+
+        printTable(table)
+    return 'looser'
+        
+
+
+################# Main Program #################
+print('hello guys')
+player_one = input('name of first player who will initialize the game:\t')
+player_two = input('name of second player who will guess:\t')
+
+print('%s please enter four letters from (b,r,g,y,w,k) with out any spaces:' %player_one)
+response = inputFunction('init')
+
+result = runGame(response)
+
+if result == 'winner':
+    print('the code was %s' %response)
+    print('%s won the game'%player_one)
+else:
+    print('the code was %s' %response)
+    print('%s lost the game'%player_one)
