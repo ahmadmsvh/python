@@ -6,20 +6,20 @@ def inputFunction(type):
     try:
         if type == 'guess':
             options = ['b','g','k','y','r','w']
-            inp = input('please enter your guess:\t')
+            inp = input('\nplease enter your guess:\t')
             for x in inp:
-                if x not in options or len(inp) > 4:
+                if x not in options or len(inp) != 4:
                     raise Exception
             return inp
         elif type == 'init':
             options = ['b','g','k','y','r','w']
-            inp = getpass('please enter your code:\t')
+            inp = getpass('\nplease enter your code:\t')
             for x in inp:
-                if x not in options or len(inp) > 4:
+                if x not in options or len(inp) != 4:
                     raise Exception
             return inp
     except Exception:
-        print('wron input,try again:')
+        print('\nwrong input,try again:')
         return inputFunction(type)
 
 
@@ -31,31 +31,44 @@ def shuffle(my_list):
         shuffled.append(my_list.pop(index))
     return shuffled
 
+
 ################# check the guess #################
 def checkGuess(guess,response):
     res_list = []
-    for x in guess:
-        if guess.find(x) == response.find(x):
-            res_list.append('right') 
-        elif x in response:
+    guess = list(guess)
+    response = list(response)
+
+    for g in range(len(guess)):
+        if guess[g] == response[g]:
+            guess[g]=0
+            response[g] = 0
+            res_list.append('right')
+
+    for g in range(len(guess)):
+        if guess[g] in response and guess[g] != 0:
+            response[response.index(guess[g])] = 0
             res_list.append('include')
+       
+
     res_list = shuffle(res_list)
     return res_list
 
 
 ################# run the game #################
 def printTable(table):
-    print()
+    print('....................................................................')
     i = 0
     for row in table:
         i += 1
-        print('%d:  '%i, end='')
+        print('. %d:\t  '%i, end='')
         for x in row[0]:
             print(' %s '%x, end='')
-        print('   checking: ', end='')
+        print('   status: ', end='')
         for x in row[1]:
             print(' %s '%x, end='')
         print()
+    print('....................................................................')
+    
 
 
 ################# run the game #################
@@ -75,18 +88,18 @@ def runGame(response):
 
 
 ################# Main Program #################
-print('hello guys')
-player_one = input('name of first player who will initialize the game:\t')
-player_two = input('name of second player who will guess:\t')
+print('\n\nhello guys')
+player_one = input('\nenter name of first player who will initialize the game:\t')
+player_two = input('\nenter name of second player who will guess:\t')
 
-print('%s please enter four letters from (b,r,g,y,w,k) with out any spaces:' %player_one)
+print('\n%s please enter four letters from (b,r,g,y,w,k) with out any spaces:' %player_one)
 response = inputFunction('init')
 
 result = runGame(response)
 
 if result == 'winner':
-    print('the code was %s' %response)
-    print('%s won the game'%player_one)
+    print('\nthe code was %s' %response)
+    print('\n%s won the game'%player_one)
 else:
-    print('the code was %s' %response)
-    print('%s lost the game'%player_one)
+    print('\nthe code was %s' %response)
+    print('\n%s lost the game'%player_one)

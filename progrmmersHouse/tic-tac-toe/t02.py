@@ -59,13 +59,11 @@ def checkWinner(table):
         for element in row: 
             if element == ' ':
                     return 'continue'
-
     return 'equal'
 
 
 ############### get input ###############
 def getInput(options):
-    
     try:
         inp = input()
         
@@ -118,7 +116,6 @@ def findEvailable(table):
 
 ############### Game Mannager ###############
 def gameMannager(table):
-
     player_one = input('player one, please, enter your name:\t')
 
     print('%s enter your symbol from "x","o" : \t' %player_one ,end='')

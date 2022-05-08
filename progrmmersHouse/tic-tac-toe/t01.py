@@ -1,20 +1,4 @@
 ############### print table ###############
-# def printTable(table):
-#     print()
-#     row_count = 0
-#     for row in table:
-#         col_count = 0
-#         for element in row:
-#             if col_count < 2:
-#                 print('',element,'|',end='')
-#                 col_count += 1
-#             else:
-#                 print('',element,end='\n')
-#                 if row_count != 2:
-#                     print('------------')
-#         row_count +=1
-#     print()
-
 def printTable(table):
     print()
     row_count = 0
@@ -188,6 +172,23 @@ table = [[x for x in range(1,4)],[x for x in range(4,7)],[x for x in range(7,10)
 
 gameMannager(table)
 
+
+
+# def printTable(table):
+#     print()
+#     row_count = 0
+#     for row in table:
+#         col_count = 0
+#         for element in row:
+#             if col_count < 2:
+#                 print('',element,'|',end='')
+#                 col_count += 1
+#             else:
+#                 print('',element,end='\n')
+#                 if row_count != 2:
+#                     print('------------')
+#         row_count +=1
+#     print()
 
 
 # print('      .       .      ')
