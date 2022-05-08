@@ -58,9 +58,7 @@ def checkWinner(table):
         for element in row: 
             if element in str(list(range(1,10))):
                     return 'continue'
-
     return 'equal'
-
 
 ############### get input ###############
 def getInput(options):
@@ -73,7 +71,6 @@ def getInput(options):
     except Exception:
         print('wrong input enter again:\t')
         return getInput(options)
-    
 
 ############### set choice ###############
 def setChoice(table,choice,symbol):
@@ -87,7 +84,6 @@ def setChoice(table,choice,symbol):
             if table[row][col] == choice:
                 table[row][col] = symbol
 
-
 ############### find available elements ###############
 def findEvailable(table):
     available_elements = []
@@ -97,7 +93,6 @@ def findEvailable(table):
                 available_elements.append(element)
     return available_elements
     
-
 ############### Game Mannager ###############
 def gameMannager(table):
 
@@ -166,39 +161,7 @@ def gameMannager(table):
                 print('equal result')
                 return
 
-
 ############### Main Program ###############
 table = [[x for x in range(1,4)],[x for x in range(4,7)],[x for x in range(7,10)]]
 
 gameMannager(table)
-
-
-
-# def printTable(table):
-#     print()
-#     row_count = 0
-#     for row in table:
-#         col_count = 0
-#         for element in row:
-#             if col_count < 2:
-#                 print('',element,'|',end='')
-#                 col_count += 1
-#             else:
-#                 print('',element,end='\n')
-#                 if row_count != 2:
-#                     print('------------')
-#         row_count +=1
-#     print()
-
-
-# print('      .       .      ')
-# print('  x   .   o   .   x  ')
-# print('      .       .      ')
-# print('. . . . . . . . . . .')
-# print('      .       .      ')
-# print('  x   .   o   .   x  ')
-# print('      .       .      ')
-# print('. . . . . . . . . . .')
-# print('      .       .      ')
-# print('  x   .   o   .   x  ')
-# print('      .       .      ')
