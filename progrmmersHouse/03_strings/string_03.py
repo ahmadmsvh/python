@@ -23,7 +23,8 @@ print(list_enumerate)
 
 list_enumerate_2 = list(enumerate(str_1,2))
 print(list_enumerate_2)
-print(enumerate(list_enumerate_2))
+
+print(list(enumerate(list_enumerate_2)))
 
 for i in enumerate(list_enumerate_2):
     print(i)
@@ -39,9 +40,6 @@ print('4-------------------------')
 for i in (str_1):
     print(i)
 
-for i,*j in (str_1):
-    print(i)
-    print(j)
 
 print('\n5----------------------------\n')
 index =2
