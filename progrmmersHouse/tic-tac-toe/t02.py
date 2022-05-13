@@ -67,24 +67,10 @@ def getInput(options):
     try:
         inp = input()
         
-        if inp == '1':
-            inp = [0,0]
-        elif inp == '2':
-            inp = [0,1]
-        elif inp == '3':
-            inp = [0,2]
-        elif inp == '4':
-            inp = [1,0]
-        elif inp == '5':
-            inp = [1,1]
-        elif inp == '6':
-            inp = [1,2]
-        elif inp == '7':
-            inp = [2,0]
-        elif inp == '8':
-            inp = [2,1]
-        elif inp == '9':
-            inp = [2,2]
+        if inp in ('123456789'):
+            a = (int(inp)-1) // 3
+            b = (int(inp)-1) % 3
+            inp = [a,b]
         
         if inp not in options: 
             raise Exception
