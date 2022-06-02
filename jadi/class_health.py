@@ -1,4 +1,3 @@
-
 class Class():
 
     def __init__(self,class_name):

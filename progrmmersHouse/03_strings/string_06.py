@@ -6,6 +6,6 @@ print("Python is a programming language that lets you work quickly.".split())
 
 print(",".join(['emad','ali','sam']))
 
-print("python".find('yt'))
+print("python".find('th'))
 
-print("python".replace('t','**'))
+print("python python".replace('yt','***'))

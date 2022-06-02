@@ -1,26 +1,26 @@
-# def getNumber():
-#     try:
-#         number = int(input('enter a number:'))
-#         return number
-#     except Exception:
-#         number = getNumber()
-#         return number
+def getNumber():
+    try:
+        return int(input('enter a number:'))
+    except Exception:
+        return getNumber()
         
-# print(getNumber())
+print(getNumber())
 
 
-# print(dir(Exception))
+print(dir(Exception))
 
 
 try:
     inp = input('enter string:\t')
 
     if inp == 'zero':
-        ahmad = Exception('wrong')
-        raise ahmad
+        raise NameError 
     if inp == 'one':
-        hamid = Exception('bong')
-        raise hamid
+        raise TypeError 
+    print(inp)
 
-except Exception:
-    print(ahmad.keys())
+
+except NameError as vd:
+    print(type(vd))
+except TypeError as ad:
+    print(type(ad))

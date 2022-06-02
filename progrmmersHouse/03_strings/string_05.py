@@ -9,7 +9,7 @@ print(str_1)
 str_1 = "{s}, {d} and {k}".format(s='ali',k='emad',d='sam')
 print(str_1)
 
-str_2 = "binary {0} is {0:b} ".format(12)
+str_2 = "binary {0} is {0:b},{0:x},{0:o} ".format(12)
 print(str_2)
 
 
