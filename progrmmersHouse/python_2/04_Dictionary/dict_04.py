@@ -1,4 +1,4 @@
-marks = {}.fromkeys(['Python','C++','JAVA'], 10)
+marks = {}.fromkeys(['Python','C++','JAVA'],10)
 print(marks)
 
 for item in marks.items():
@@ -18,7 +18,7 @@ marks_2 = {}.fromkeys(['python','c++','java'], [1,2,3])
 print(marks_2)
 
 
-squares = { x:x**2 for x in range(6)}
+squares = { x : x**2 for x in range(6)}
 print(squares)
 
 
@@ -43,9 +43,10 @@ print( 2 not in squares_4)
 
 print('-----------------------')
 squares_5 = {0:0, 2:4, 4:16, 6:36, 8:64}
+# squares_5 = {1:0, 2:4, 4:16, 6:36, 8:64}
 print(squares_5)
 
-print(all(squares_5))
+print(all(squares_5)) #true
 print(any(squares_5))
 
 print('-----------------------')

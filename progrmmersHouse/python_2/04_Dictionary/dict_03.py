@@ -19,4 +19,4 @@ squares_dict.clear()
 print(squares_dict)
 
 del squares_dict
-print(squares_dict)
+# print(squares_dict)

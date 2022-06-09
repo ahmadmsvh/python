@@ -2,6 +2,7 @@ my_tuple = (4,2,3,[6,5])
 
 # my_tuple[1] = 9
 my_tuple[3][0] = 9
+my_tuple[3].append(12)
 print(my_tuple)
 
 # tulpes can be reassigned

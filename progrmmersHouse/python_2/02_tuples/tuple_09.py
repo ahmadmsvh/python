@@ -5,7 +5,7 @@ print('1--------------------------')
 print(len(zoo_tuple))
 
 new_zoo_tuple = 'lion','python','eagle','penguin','mouse',zoo_tuple
-
+print(new_zoo_tuple)
 
 print('2--------------------------')
 print(type(new_zoo_tuple))
@@ -31,15 +31,22 @@ print((1,'python')==(1,'Python'))
 
 t1 = (1,2,3)
 t2 = t1
+l1 = [1,2,3]
+l2 = l1
+# l2[2]=4
 print(id(t1),id(t2))
+print(id(l1),id(l2))
 print(t1 == t2)
 print(t1 is t2)
 
 t1 = (1,2,3)
 t2 = (1,2,3)
+l1 = [1,2,3]
+l2 = [1,2,3]
 print(t1 == t2)
 print(t1 is t2)
 print(id(t1),id(t2))
+print(id(l1),id(l2))
 
 print('6--------------------------')
 

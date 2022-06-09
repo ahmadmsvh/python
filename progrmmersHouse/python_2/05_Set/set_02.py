@@ -9,7 +9,7 @@ print(my_set)
 my_set.discard(2)
 print(my_set)
 
-# my_set.remove(2) # it raise keyError
+# my_set.remove(2) # it raises keyError
 
 my_set = set('HelloWord!')
 print(my_set)

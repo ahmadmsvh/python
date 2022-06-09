@@ -7,4 +7,4 @@ my_tuple = ('p','y','t','h','o','n')
 # print(my_tuple)
 
 del my_tuple
-print(my_tuple)
+# print(my_tuple)
