@@ -6,7 +6,6 @@ def openPhoneBook():
     if phone_book == None:
         return
 
-    
     while True:            
         print('________________________________________________')
         print('\n\tenter "1" to show all.')
@@ -33,7 +32,7 @@ def openPhoneBook():
             phone_book.close()
             phone_book = addPerson(phone_book_name)
         elif option == 4:
-            phone_book = removePerson(phone_book_name)
+            phone_book = removePerson(phone_book_name, phone_book_dict)
         elif option == 0:
             phone_book.close()
             return
@@ -41,6 +40,7 @@ def openPhoneBook():
 #--------------------------------
 def findPerson(phone_book_dict):
     name = input('\n\tenter the name:\t')
+
     if name not in phone_book_dict:
         print('\nperson does not exist!!!')
     else:
@@ -63,19 +63,17 @@ def addPerson(phone_book_name):
     fp = open('./08_Filing/{}.txt'.format(phone_book_name), 'a')
     new_number = input('enter new name and number like (name:number) :\t')
     fp.write(new_number+'\n')
+
     print('\n\t"new number added"')
+
     fp.close()
+
     fp = open('./08_Filing/{}.txt'.format(phone_book_name), 'r')
     return fp
 
 #--------------------------------
-def removePerson(phone_book_name):
+def removePerson(phone_book_name, phone_book_dict):
     fp = open('./08_Filing/{}.txt'.format(phone_book_name), 'r')
-
-    phone_book_dict = {}
-
-    for line in fp.readlines():
-        phone_book_dict['{}'.format(line.split(':')[0].strip())] = line.split(':')[1].strip()
 
     remove_name = input('\n\tenter a name to remove:\t')
     phone_book_dict.pop(remove_name)

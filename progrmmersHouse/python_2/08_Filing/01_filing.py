@@ -10,7 +10,6 @@ finally:
     if my_file:
         my_file.close()
 
-    
 
 # my_file = open('08_Filing/my_file.txt', 'w') 
 
