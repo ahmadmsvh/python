@@ -12,7 +12,7 @@ print(n_list[0][1]) # a
 
 print(n_list[1][1]) # 0
 
-print(n_list[4][0]) # error
+#print(n_list[4][0]) # error
 
 
 

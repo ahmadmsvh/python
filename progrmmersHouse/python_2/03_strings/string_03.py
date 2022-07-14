@@ -36,7 +36,7 @@ for i,j in enumerate(list_enumerate_2):
 for i in list_enumerate_2:
     print(i[0])
 
-print('4-------------------------')
+print('\n4-------------------------\n')
 for i in (str_1):
     print(i)
 

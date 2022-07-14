@@ -1,5 +1,5 @@
 odd =[1,3,5]
-
+odd = odd + [3,4,5]
 print(odd + [9,7,5])
 
 print(['python']*3)

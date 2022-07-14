@@ -81,8 +81,11 @@ print(list1)
 
 print('8--------------------------')
 my_tuple = ('p','y','t','h','o','N')
+
 print(sorted(my_tuple, key = str.lower, reverse =True ))
+print(sorted(my_tuple, reverse =True ))
 print(type(sorted(my_tuple, key = str.lower, reverse =True )))
+
 
 my_tuple = sorted(my_tuple, key = str.lower, reverse =True )
 print(my_tuple)

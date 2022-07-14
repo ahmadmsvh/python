@@ -8,7 +8,7 @@ print(my_list[5:])
 
 print(my_list[:])
 
-print(my_list) 
+print(my_list)
 
 #------------------------------------
 l = ['spam','Spam','SPAM']
